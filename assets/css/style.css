@@ -1,0 +1,380 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #000;
+  background-color: #fafafc;
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(11, 12, 13, 0.16), 0 0 1px 0 rgba(11, 12, 13, 0.24);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.header__notes-count {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.header__notes-count::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icons/count.svg");
+}
+
+.header__count {
+  font-weight: 700;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 84px;
+  min-height: 100vh ;
+}
+
+.note-form {
+  margin-bottom: 24px;
+}
+
+.note-form__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 12px 0 rgba(11, 12, 13, 0.08), 0 16px 24px 0 rgba(11, 12, 13, 0.04), 0 1px 2px 0 rgba(11, 12, 13, 0.08);
+  border-radius: 4px;
+}
+
+.note-form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  line-height: 2;
+  color: #919191;
+}
+
+.title-label {
+  flex: 1 0 100%;
+}
+
+.description-label {
+  flex-grow: 1;
+}
+
+.note-form__title,
+.note-form__description {
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 6px 12px;
+}
+
+.note-form__title {
+  max-width: 344px;
+}
+
+.note-form__description {
+  min-width: 100%;
+  min-height: 84px;
+  resize: none;
+  overflow: auto;
+}
+
+.note-form__title::placeholder,
+.note-form__description::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #919191;
+}
+
+.note-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.note-form__radio-list {
+  flex-grow: 1;
+  list-style: none;
+  display: flex;
+  gap: 14px;
+}
+
+.note-form__radio {
+  appearance: none;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.note-form__radio[aria-label = "red"] {
+  background-color: #F37D7D;
+}
+
+.note-form__radio[aria-label = "green"] {
+  background-color: #C2F37D;
+}
+
+.note-form__radio[aria-label = "blue"] {
+  background-color: #7DE1F3;
+}
+
+.note-form__radio[aria-label = "yellow"] {
+  background-color: #F3DB7D;
+}
+
+.note-form__radio[aria-label = "purple"] {
+  background-color: #E77DF3;
+}
+
+.note-form__radio:checked {
+  border-color: white;
+  box-shadow: 0 0 0 3px white, /* Внутренняя обводка для создания промежутка */
+  0 0 0 4.5px #007BFF; /* Внешняя обводка */
+}
+
+.note-form__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 6px 24px;
+  min-height: 36px;
+  color: #fff;
+  border: 2px solid transparent;
+  background-color: #457cdc;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.note-form__button span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.note-form__button:hover {
+  background-color: transparent;
+  border-color: #457cdc;
+  color: #457cdc;
+}
+
+.filter {
+  margin-bottom: 12px;
+}
+
+.filter__inner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.notes__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: stretch;
+}
+
+.notes__empty {
+  text-align: center;
+}
+
+.notes__empty-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.notes__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+}
+
+.notes__item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  height: max-content;
+  border: 1px solid #e8e8e8;
+}
+
+.notes__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.notes__title {
+}
+
+.notes__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notes__favorite {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icons/not-favorite.svg");
+  cursor: pointer;
+}
+
+.notes__item.favorite  .notes__favorite {
+  background-image: url("../img/icons/favorite.svg");
+}
+
+.notes__delete {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icons/delete.svg");
+  cursor: pointer;
+}
+
+.notes__description {
+  padding: 12px;
+  background-color: #fff;
+}
+
+.messages-box {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  right: 64px;
+  bottom: 72px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 14px 24px;
+  border-radius: 10px;
+  color: #fff;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.message.success {
+  background-color: #47b27d;
+}
+
+.message.error {
+  background-color: #f23d5b;
+}
+
+.message__text {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message.success .message__text::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icons/success.svg");
+}
+
+.message.error .message__text::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icons/error.svg");
+}
+
+@media (max-width: 1024px) {
+  .notes__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .messages-box {
+    right: 32px;
+    bottom: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .notes__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .note-form__inner {
+    flex-direction: column;
+  }
+
+  .note-form__title {
+    max-width: 100%;
+  }
+
+  .note-form__button {
+    align-self: center;
+  }
+
+  .note-form__fieldset {
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .messages-box {
+    right: 16px;
+    bottom: 18px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__notes-count-text {
+    display: none;
+  }
+}

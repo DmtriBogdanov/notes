@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge"
+  >
+  <link
+    rel="icon"
+    href="./assets/img/icons/favicon.svg"
+    type="image/svg+xml">
+  <link
+    rel="stylesheet"
+    href="./assets/css/fonts.css"
+  >
+  <link
+    rel="stylesheet"
+    href="./assets/css/reset.css"
+  >
+  <link
+    rel="stylesheet"
+    href="./assets/css/style.css"
+  >
+  <title>NOTES</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner container">
+      <a class="header__logo" href="#">
+        <img
+          src="./assets/img/📝logo.svg"
+          alt="Логотип"
+        >
+      </a>
+      <div class="header__notes-count">
+        <span class="header__notes-count-text">Всего заметок:</span><span class="header__count-all"></span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <form class="note-form" name="notes">
+      <div class="container">
+        <div class="note-form__inner">
+          <label class="note-form__label title-label">
+            Название заметки
+            <input
+              class="note-form__title"
+              type="text"
+              name="name"
+              placeholder="Напишите название новой заметки..."
+            >
+          </label>
+          <label class="note-form__label description-label">
+            Описание новой заметки
+            <textarea
+              class="note-form__description"
+              name="description"
+              placeholder="Напишите описание новой заметки..."
+            ></textarea>
+          </label>
+          <fieldset class="note-form__fieldset">
+            <legend class="note-form__label legend-label">Выберите цвет заметки</legend>
+            <ul class="note-form__radio-list">
+              <li>
+                <input checked class="note-form__radio" type="radio" name="color" value="#f3db7d" aria-label="yellow" />
+              </li>
+              <li>
+                <input class="note-form__radio" type="radio" name="color" value="#c2f37d" aria-label="red" />
+              </li>
+              <li>
+                <input class="note-form__radio" type="radio" name="color" value="#7de1f3" aria-label="green" />
+              </li>
+              <li>
+                <input class="note-form__radio" type="radio" name="color" value="#f37d7d" aria-label="blue" />
+              </li>
+              <li>
+                <input class="note-form__radio" type="radio" name="color" value="#e77df3" aria-label="purple" />
+              </li>
+            </ul>
+            <button class="note-form__button" type="submit">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H12M12 12H18M12 12V6M12 12V18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>Добавить заметку</span>
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </form>
+
+    <div class="filter-box filter">
+      <div class="filter__inner container">
+        <label class="filter__label">
+          <input
+            class="filter__checkbox"
+            type="checkbox"
+            name=""
+          >
+          Показать только избранные заметки
+        </label>
+      </div>
+    </div>
+    <div class="notes-box notes">
+      <div class="container">
+        <div class="notes__inner">
+          <ul class="notes__list">
+            <!-- Сюда будут рендерится заметки из JavaScript -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="messages-box">
+      <!-- Сюда будут рендерится информационные сообщения из JavaScript -->
+    </div>
+  </main>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
+
+
