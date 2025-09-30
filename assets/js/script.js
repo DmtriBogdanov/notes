@@ -143,7 +143,7 @@ const view = {
         ? `
           <div class="notes__empty">
             <p class="notes__empty-text">У вас нет еще ни одной избранной заметки</p>
-            <p class="notes__empty-text">Отметьте понравившиеся заметки</p>
+            <p class="notes__empty-text">Отметьте важные, чтобы они появились здесь.</p>
           </div>`
         : `
           <div class="notes__empty">
