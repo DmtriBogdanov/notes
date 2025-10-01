@@ -201,11 +201,56 @@ main {
 }
 
 .filter__label {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 12px;
   line-height: 2;
+}
+
+.filter__checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.filter__checkmark {
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 1.5px solid #000;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.filter__checkmark::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 8px;
+  background-image: url("../img/icons/check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.2s 0.1s;
+}
+
+/* Когда чекбокс отмечен */
+.filter__checkbox:checked + .filter__checkmark {
+  background-color: #457cdc;
+  border: none;
+}
+
+.filter__checkbox:checked + .filter__checkmark::after {
+  opacity: 1;
 }
 
 .notes__inner {
