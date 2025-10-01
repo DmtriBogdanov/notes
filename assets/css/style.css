@@ -225,7 +225,6 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   list-style: none;
-  align-items: start;
 }
 
 .notes__item {
@@ -233,8 +232,8 @@ main {
   flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
+  height: max-content;
   border: 1px solid #e8e8e8;
-  align-self: start;
 }
 
 .notes__header {
