@@ -93,6 +93,11 @@ main {
   padding: 6px 12px;
 }
 
+.note-form__title:focus-visible,
+.note-form__description:focus-visible {
+  outline: 2px solid #457cdc;
+}
+
 .note-form__title {
   max-width: 344px;
 }
