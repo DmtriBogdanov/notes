@@ -79,8 +79,8 @@ const view = {
       e.preventDefault()
       const title = form.elements["name"].value
       const description = form.elements["description"].value
-      const radios = form.elements["color"]
-      const colorChecked = Array.from(radios).find(color => color.checked)
+      const radioColors = form.elements["color"]
+      const colorChecked = Array.from(radioColors).find(color => color.checked)
       const color = colorChecked.value
 
       const isSuccess = controller.addNote(title, description, color)
