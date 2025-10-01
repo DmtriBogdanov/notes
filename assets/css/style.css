@@ -243,7 +243,6 @@ main {
   transition: 0.2s 0.1s;
 }
 
-/* Когда чекбокс отмечен */
 .filter__checkbox:checked + .filter__checkmark {
   background-color: #457cdc;
   border: none;

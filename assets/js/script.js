@@ -127,8 +127,8 @@ const view = {
             <div style="background-color: ${note.color}" class="notes__header">
               <span class="notes__title">${note.title}</span>
               <div class="notes__actions">
-                <button class="notes__favorite" type="button"></button>
-                <button class="notes__delete" type="button"></button>
+                <button class="notes__favorite" type="button" title="${note.isFavorite ? "Удалить из избранного" : "Добавить в избранное"}"></button>
+                <button class="notes__delete" type="button"  title="Удалить заметку"></button>
               </div>
             </div>
             <div class="notes__description">
